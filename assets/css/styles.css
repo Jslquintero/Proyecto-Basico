@@ -1,0 +1,123 @@
+@import url(./_navbar.css);
+@import url(./_form.css);
+@import url(./_card.css);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.btn {
+  padding: 0.7rem;
+  border: none;
+  background-color: #d9f642;
+  font-weight: 700;
+  box-shadow: #000000 0.3rem 0.5rem 0 0;
+  color: #000000;
+}
+.btn:hover {
+  background-color: #fa0909fd;
+  color: white;
+  cursor: pointer;
+}
+
+/*#region width*/
+.w-100 {
+  width: 100% !important;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+/*#endregion*/
+
+/*#region Alineaciones*/
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.content-center {
+  align-items: start;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.content-right {
+  align-items: start;
+  justify-items: center;
+  align-self: center;
+  justify-self: end;
+}
+
+.content-left {
+  align-items: start;
+  justify-items: center;
+  align-self: center;
+  justify-self: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+/*#endregion*/

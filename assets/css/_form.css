@@ -1,0 +1,16 @@
+.form-group {
+  margin-bottom: 2.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.form-control {
+  padding: 0.5rem;
+  border: 1px solid #0f0f0f;
+  margin-top: 0.5rem;
+  box-shadow: #000000 0.3rem 0.5rem 0 0;
+}

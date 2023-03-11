@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Iniciar Sesión</h1>
+      <form action="./views/home.html">
+        <div class="form-group">
+          <label class="form-label" for="username">Usuario</label>
+          <input
+            class="form-control"
+            type="text"
+            id="username"
+            placeholder="Daniela"
+            name="username"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Contraseña</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            placeholder="ioio"
+            name="password"
+          />
+        </div>
+
+        <button class="btn w-100" type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<style>
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #000000 0.3rem 0.5rem 0 0;
+    border: 1px solid #000000;
+    height: 50vh;
+    width: 20vw;
+    margin-left: 45rem !important;
+    margin-top: 6rem;
+    background-color: #ffffff;
+  }
+
+  body {
+    background-image: url("./assets/img/login-form/transparent_plasttic_texture.png");
+  }
+</style>

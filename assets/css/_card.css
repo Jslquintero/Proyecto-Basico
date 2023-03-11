@@ -1,0 +1,27 @@
+.card {
+  width: 30vw;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: #000000 0.3rem 0.5rem 0 0;
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #d9f642;
+  color: #000000;
+  padding: 0.5rem;
+  text-decoration: none;
+  box-shadow: #000000 0.3rem 0.5rem 0 0;
+  font-weight: 700;
+}

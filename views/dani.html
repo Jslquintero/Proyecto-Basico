@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programacion</title>
+  </head>
+	<script>
+		function mostrarReceta() {
+			var receta = document.getElementById("receta").value;
+			if (receta == "tacos") {
+				document.getElementById("instrucciones").innerHTML = "<ol><li>Calienta una sartén a fuego medio-alto.</li><li>Agrega la carne molida y cocina hasta que esté dorada.</li><li>Agrega la cebolla y el ajo y cocina por un par de minutos.</li><li>Agrega el tomate y cocina hasta que se ablande.</li><li>Agrega el chile en polvo y la sal y revuelve.</li><li>Calienta las tortillas en otra sartén.</li><li>Sirve la carne y las tortillas con tus ingredientes favoritos, como queso, lechuga y salsa.</li></ol>";
+			} else if (receta == "ensalada") {
+				document.getElementById("instrucciones").innerHTML = "<ol><li>Lava y seca la lechuga y los tomates.</li><li>Corta los tomates en cuartos y la lechuga en pedazos pequeños.</li><li>Agrega los ingredientes restantes, como pepino, zanahoria y cebolla, si lo deseas.</li><li>Prepara el aderezo mezclando aceite de oliva, vinagre y mostaza Dijon.</li><li>Vierte el aderezo sobre la ensalada y revuelve.</li><li>Sirve y disfruta.</li></ol>";
+			} else {
+				document.getElementById("instrucciones").innerHTML = "Selecciona una receta para ver las instrucciones.";
+			}
+		}
+	</script>
+</head>
+<body>
+	
+    <div class="wrapper">
+        <div class="container">
+            <h1>Estructuras Condicionales</h1>
+    
+        <div>
+            <p>Las estructuras condicionales nos permiten ejecutar un bloque de codigo si se cumple una condicion , cuales son las estrucutras condicionales?</p>
+            <ul class="snippets">
+                <li>if</li>
+                <li>else if</li>
+                <li>else</li>
+            </ul>
+           
+            <p>Tenemos la siguiente condicion para mostrar las recetas segun el valor seleccionado del menu desplegable:
+                <ul class="snippets">
+                    <li>
+                        if (receta == "tacos"){
+                    </li>
+                    <li>aqui colocaremos el codigo que se ejecutara si la condicion es verdadera</li>
+                    <li>}</li>
+                </ul>
+               
+                    
+                <ul class="snippets">
+                    <li>
+                        else if (receta == "ensalada"){
+                    </li>
+                    <li> aqui colocaremos el codigo que se ejecutara si la condicion es verdadera</li>
+                    <li>}</li>
+                </ul>
+
+                <ul class="snippets">
+                    <li>
+                        else{
+                    </li>
+                    <li> aqui colocaremos el codigo que se ejecutara si la condicion es falsa</li>
+                    <li>}</li>
+                </ul>
+
+                Por lo general else if no es tan utilizado , ya que se podia haber resumido en el uso de dos if o utilizar el else  para saber que la condicion seria la contraria.
+
+            </p>
+        </div>
+    
+        <label for="receta">Elige una receta:</label>
+        <select id="receta" onchange="mostrarReceta()">
+            <option value="">Selecciona una opción</option>
+            <option value="tacos">Tacos de carne</option>
+            <option value="ensalada">Ensalada César</option>
+        </select>
+        <div id="instrucciones"></div>
+        <hr/>
+        <div>
+            <h1>Operadores logicos</h1>
+            <p>Los operadores logicos nos permiten crear condiciones mas complejas, para ello tenemos los siguientes operadores:</p>
+            <ul>
+                <li>
+                    && (and) - si ambas condiciones son verdaderas, la condicion sera verdadera
+                </li>
+                <li>
+                    || (or) - si una de las condiciones es verdadera, la condicion sera verdadera
+                </li>
+                <li>
+                    ! (not) - si la condicion es verdadera, la condicion sera falsa
+                </li>
+            </ul>
+            <p>Por ejemplo, si queremos saber si un numero es mayor a 10 y menor a 20, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    if (numero > 10 && numero < 20){
+                </li>
+                <li> aqui colocaremos el codigo que se ejecutara si la condicion es verdadera</li>
+                <li>}</li>
+            </ul>
+            <p>Si queremos saber si un numero es mayor a 10 o menor a 5, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    if (numero > 10 || numero < 5){
+                </li>
+                <li> aqui colocaremos el codigo que se ejecutara si la condicion es verdadera</li>
+                <li>}</li>
+            </ul>
+
+            <p>Si queremos saber si un numero es mayor a 10, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    if (numero > 10){
+                </li>
+                <li> aqui colocaremos el codigo que se ejecutara si la condicion es verdadera</li>
+                <li>}</li>
+            </ul>
+
+        </div>
+        <hr/>
+        <div>
+            <h1>Condicion ternaria</h1>
+
+            <p>La condicion ternaria nos permite crear una condicion en una sola linea, la cual es muy util cuando queremos asignar un valor a una variable dependiendo de una condicion.</p>
+            <p>Por ejemplo, si queremos asignar un valor a la variable "numero" dependiendo de si el numero es mayor a 10, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    numero = (numero > 10) ? 10 : 0;
+                </li>
+            </ul>
+
+            <p>Si queremos asignar un valor a la variable "numero" dependiendo de si el numero es mayor a 10 o menor a 5, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    numero = (numero > 10 || numero < 5) ? 10 : 0;
+                </li>
+        </div>
+
+        <div>
+            <hr/>
+        </div>
+            <h1>Switch</h1>
+            <p>El switch nos permite crear condiciones mas complejas con valores controlados, esto quiere decir que la estructura no siempre sera la mas adecuada
+                para ciertas ocaciones.
+                , para ello tenemos los siguientes operadores:</p>
+            <ul>
+                <li>
+                    case - si la condicion es verdadera, se ejecutara el codigo que se encuentra dentro del case
+                </li>
+                <li>
+                    break - si la condicion es verdadera, se ejecutara el codigo que se encuentra dentro del case y se saldra del switch
+                </li>
+                <li>
+                    default - si ninguna de las condiciones es verdadera, se ejecutara el codigo que se encuentra dentro del default
+                </li>
+            </ul>
+
+            <p>Por ejemplo, si queremos saber si un numero es mayor a 10 y menor a 20, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    switch (numero){
+                </li>
+                <li>
+                    case 1:
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es verdadera
+                </li>
+                <li>
+                    break;
+                </li>
+                <li>
+                    case 2:
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es verdadera
+                </li>
+                <li>
+                    break;
+                </li>
+                <li>
+                    default:
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es falsa
+                </li>
+                <li>
+                    break;
+                </li>
+                <li>}</li>
+            </ul>
+            <hr/>
+        <div>
+            <h1>Estructuras Repetitivas</h1>
+            <p>Las estructuras repetitivas nos permiten ejecutar un bloque de codigo varias veces, para ello tenemos los siguientes operadores:</p>
+            <ul>
+                <li>
+                    while - mientras la condicion sea verdadera, se ejecutara el codigo que se encuentra dentro del while
+                </li>
+                <li>
+                    do while - se ejecutara el codigo que se encuentra dentro del do while, y luego se evaluara la condicion
+                </li>
+                <li>
+                    for - se ejecutara el codigo que se encuentra dentro del for, y luego se evaluara la condicion
+                </li>
+            </ul>
+
+            <p>Por ejemplo, si queremos saber si un numero es mayor a 10 y menor a 20, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    while (numero > 10 && numero < 20){
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es verdadera
+                </li>
+                <li>}</li>
+            </ul>
+
+            <p>Si queremos saber si un numero es mayor a 10 o menor a 5, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    do{
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es verdadera
+                </li>
+                <li>
+                    }while(numero > 10 || numero < 5);
+                </li>
+            </ul>
+            <p>Si queremos saber si un numero es mayor a 10, podemos escribir la siguiente condicion:</p>
+            <ul class="snippets">
+                <li>
+                    for (let i = 0; i < 10; i++){
+                </li>
+                <li>
+                    aqui colocaremos el codigo que se ejecutara si la condicion es verdadera
+                </li>
+                <li>}</li>
+            </ul>
+
+
+        </div>
+        
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<style>
+    body{
+        background-color: #5f5d5dbe;
+    }
+    .wrapper{
+        margin: 10rem;
+        height: auto;
+        box-shadow: #000000 0.3rem 0.5rem 0 0;
+        background-color: white;
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .container{
+        margin: 5rem;
+        padding-top: 5rem;
+    }
+
+    .snippets{
+        list-style: none;
+        background-color: rgb(78, 85, 88);
+        width: 30rem;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+    }
+</style>
